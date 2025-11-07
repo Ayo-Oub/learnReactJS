@@ -1,0 +1,49 @@
+.back-link {
+  position: fixed;
+  top: 7px;
+  background-color: var(--color-primary-dark);
+  color: var(--color-light);
+  padding: 1rem;
+  font-size: var(--fontSize-base);
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+}
+.back-link:hover,
+.back-link:active {
+  background-color: var(--color-primary);
+  transform: scale(0.97);
+}
+.cours-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin: 1rem auto;
+  max-width: 116rem;
+  padding: 2rem;
+  box-shadow: 0 0 1px 3px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+.cours-title {
+  color: var(--color-primary-dark);
+  font-size: var(--fontSize-3xl);
+}
+.cours-section {
+  color: var(--color-primary);
+  font-size: var(--fontSize-xl);
+}
+.word-spe {
+  font-weight: var(--font-Weight-bold);
+  color: var(--color-secondary-dark);
+  border-bottom: 2px solid var(--color-secondary-dark);
+  border-radius: 2px;
+
+  width: fit-content;
+}
+.result-codes {
+  background-color: var(--color-primary-light);
+  padding: 4px 7px;
+  width: fit-content;
+  min-width: 60rem;
+}

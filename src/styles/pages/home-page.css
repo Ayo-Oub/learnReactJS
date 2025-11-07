@@ -1,0 +1,21 @@
+.home-container{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     gap: 2rem;
+     height: 100vh;
+}
+.home-link{
+     background-color: var(--color-primary);
+     color: var(--color-primary-light);
+     padding: 1rem;
+     font-size: var(--fontSize-base);
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+     transition: all 0.2s ease-in;
+}
+.home-link:hover, .home-link:active{
+     background-color: var(--color-primary-dark);
+     transform: scale(0.97);
+}

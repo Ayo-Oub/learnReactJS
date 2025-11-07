@@ -1,0 +1,85 @@
+/* Start rules general */
+:root{
+  /* Font size */
+  --fontSize-xs: 1.2rem;
+  --fontSize-sm: 1.4rem;
+  --fontSize-base: 1.6rem;
+  --fontSize-lg: 1.8rem;
+  --fontSize-xl: 2rem;
+  --fontSize-2xl: 2.4rem;
+  --fontSize-3xl: 3.2rem;
+  --fontSize-4xl: 4rem;
+  --fontSize-5xl: 4.8rem;
+  --fontSize-6xl: 6.2rem;
+  --fontSize-7xl: 7.2rem;
+  /* Font weight */
+  --fontWeight-light: 300;
+  --fontWeight-regular: 400;
+  --fontWeight-medium: 500;
+  --fontWeight-semibold: 600;
+  --fontWeight-bold: 700;
+  /* Line height */
+  --lineHeight-xs: 1.1;
+  --lineHeight-sm: 1.25;
+  --lineHeight-base: 1.5;
+  --lineHeight-lg: 1.75;
+  --lineHeight-xl: 2;
+  /* Colors */
+  --color-primary: #278ef7;
+  --color-primary-dark: #175594;
+  --color-primary-light: #beddfd;
+  --color-secondary: #01a96f;
+  --color-secondary-dark: #01764e;
+  --color-secondary-light: #b3e5d4;
+  --color-white: #fff;
+  --color-light: #e6e6e6;
+  --color-gray: #adb5bd;
+  --color-dark: #212529;
+  --color-black: #000;
+}
+html{
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+   font-family: "Fira Code", monospace;
+   font-weight: var(--fontWeight-medium);
+   line-height: var(--lineHeight-base);
+   color: var(--color-dark);
+}
+h1,h2,h3,h4,h5,h6{
+  font-weight: var(--fontWeight-bold);
+  line-height: var(--lineHeight-sm);
+  color: var(--color-black);
+}
+h1{
+  font-size: var(--fontSize-3xl);
+}
+h2{
+  font-size: var(--fontSize-2xl);
+}
+h3{
+  font-size: var(--fontSize-xl);
+}
+h4{
+  font-size: var(--fontSize-lg);
+}
+p{
+  font-size: var(--fontSize-lg);
+}
+ul{
+  list-style: none;
+}
+span{
+  display: inline-block;
+}
+.container{
+  max-width: 1320px;
+  width: 90%;
+  margin: 0 auto;
+}
