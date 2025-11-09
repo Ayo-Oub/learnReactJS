@@ -48,15 +48,19 @@
 }
 li {
   font-size: var(--fontSize-lg);
-  list-style: square;
   list-style-position: inside;
 }
 input {
-  width: 23px;
-  padding: 1px 2px;
+  width: 5ch;
+  text-align: center;
+  field-sizing: content;
+  margin: 0 3px;
   border: none;
   outline: none;
+  background-color: var(--color-primary-light);
+  padding: 1px 5px;
+  border-radius: 3px;
   font-size: var(--fontSize-sm);
-  background-color: var(--color-dark);
-  color: var(--color-primary-light);
+  color: var(--color-primary-dark);
+  font-weight: var(--font-Weight-bold);
 }

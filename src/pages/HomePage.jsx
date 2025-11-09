@@ -21,9 +21,9 @@ export default function HomePage() {
 
       </div>
       <div className='links-container'>
-        <h2>Les évènements</h2>
+        <h2>Les événements</h2>
         <div className='links'>
-          <Link to='/on_click' className='home-link'>L'évènement onClick</Link>
+          <Link to='/on_click' className='home-link'>L'événement onClick</Link>
         </div>
 
       </div>
