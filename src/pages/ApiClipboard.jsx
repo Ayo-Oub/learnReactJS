@@ -27,7 +27,13 @@ export default function ApiClipboard() {
                  <JsxCode content={api_clipBoard[0]} />
                  <p>Quand tu cliques sur le bouton, "Hello React !" est copié.</p>
                  <h4 className='cours-section'>Utilisation en ReactJS</h4>
-                 <JsxCode content={api_clipBoard[1]}  />
+                 <JsxCode content={api_clipBoard[1]} />
+                 <ul>
+                      <li>navigator.clipboard.writeText(text) → copie le texte.</li>
+                      <li>useState → pour gérer du message “copié”.</li>
+                      <li>setTimeout → cache le message après 2 s.</li>
+                      <li>L’action doit venir d’un clic utilisateur.</li>
+                 </ul>
                  </div>
     </>
   )

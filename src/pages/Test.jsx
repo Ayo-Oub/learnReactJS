@@ -1,20 +1,35 @@
 import { useState } from "react";
 
 export default function Test() {
-     const message ="I'm from morocco";
-     const [copied, setCopied] = useState(false);
+     const [text, setText] = useState('');
      function handleCopy() {
-          navigator.clipboard.writeText(message).then(() => {
-               setCopied(true);
-               setTimeout(() => setCopied(false), 2000);
-          });
-     }
-   
+          navigator.clipboard.writeText(text);
+   }
      return (
           <div className="test-container" style={{ textAlign: "center" }}>
-               <p>{message}</p>
-               <button onClick={handleCopy}>Copier</button>
-               {copied && <span style={{color: "#03bdae"}}>Copié</span>}
+               <input
+                    type="text"
+                    value={text}
+                    onChange={(e) => setText(e.target.value)}
+                    style={{
+                         margin: "30px",
+                         padding: "10px",
+                         width: "80px"
+                    }}
+               />
+               <button
+                    onClick={handleCopy}
+                    style={{
+                         margin: "30px",
+                         padding: "10px",
+                         color: "#217263",
+                         backgroundColor: "#2982",
+                         fontSize: "20px", 
+                         border: "none",
+                         outline: "none",
+                         cursor: "pointer"
+                    }}
+               >Copy text</button>
           </div>
      );
 }
