@@ -27,6 +27,13 @@ export default function HomePage() {
         </div>
 
       </div>
+      <div className='links-container'>
+        <h2>Interactions avec le navigator</h2>
+        <div className='links'>
+          <Link to='/api_clipboard' className='home-link'>API Clipboard (copier-coller)</Link>
+        </div>
+
+      </div>
 
     </div>
   )

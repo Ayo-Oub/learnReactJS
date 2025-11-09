@@ -38,6 +38,26 @@ export default function OnClickExercices() {
                            ))} />
                       </ul>
                  </ul>
+                 <li>Relier les boutons au state avec onClick</li>
+                 <ul>
+                      <li>Bouton +1 : augmenter le compteur</li>
+                      <JsxCodeExercice content={on_clickData_exercices[3].map((element, index) => (
+                           <React.Fragment key={index}>{element}</React.Fragment>
+                      ))} />
+                      <li>Bouton -1 : diminué le compteur mais pas sous 0</li>
+                      <JsxCodeExercice content={on_clickData_exercices[4].map((element, index) => (
+                           <React.Fragment key={index}>{element}</React.Fragment>
+                      ))} />
+                      <li>Bouton reset : remettre à zéro </li>
+                      <JsxCodeExercice content={on_clickData_exercices[5].map((element, index) => (
+                           <React.Fragment key={index}>{element}</React.Fragment>
+                      ))} />
+                      <li>Affiche la valeur</li>
+                      <li>Bouton reset : remettre à zéro </li>
+                      <JsxCodeExercice content={on_clickData_exercices[6].map((element, index) => (
+                           <React.Fragment key={index}>{element}</React.Fragment>
+                      ))} />
+                 </ul>
             </ol>
             
     </>
