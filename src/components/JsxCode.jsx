@@ -1,4 +1,4 @@
-import "../styles/components/terminal-jsx-code.css";
+import "../styles/components/jsx-code.css";
 import copyImg from "../../public/images/copy.svg";
 import { useState } from "react";
 export default function JsxCode({ content, language = "jsx" }) {

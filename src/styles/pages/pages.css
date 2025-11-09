@@ -38,7 +38,6 @@
   color: var(--color-secondary-dark);
   border-bottom: 2px solid var(--color-secondary-dark);
   border-radius: 2px;
-
   width: fit-content;
 }
 .result-codes {
@@ -47,8 +46,17 @@
   width: fit-content;
   min-width: 60rem;
 }
-li{
-     font-size: var(--fontSize-lg);
-     list-style: square;
-     list-style-position: inside;
+li {
+  font-size: var(--fontSize-lg);
+  list-style: square;
+  list-style-position: inside;
+}
+input {
+  width: 23px;
+  padding: 1px 2px;
+  border: none;
+  outline: none;
+  font-size: var(--fontSize-sm);
+  background-color: var(--color-dark);
+  color: var(--color-primary-light);
 }

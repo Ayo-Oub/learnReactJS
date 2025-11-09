@@ -2,6 +2,7 @@ import { Link } from 'react-router'
 import JsxCode from '../components/JsxCode'
 import on_clickData from '../data/onClickData'
 import '../styles/pages/pages.css'
+import OnClickExercices from './Exercices/OnClickExercices'
 export default function OnClickPage() {
   return (
     <>
@@ -47,6 +48,7 @@ export default function OnClickPage() {
           <li>Place ta fonction à l’intérieur du composant si elle ne sert qu’à ce composant.</li>
           <li>N’écris pas onClick={'{maFonction()}'} sauf si tu veux qu’elle s’exécute dès le rendu (rarement voulu).</li>
         </ol>
+        <OnClickExercices />
       </div>
     </>
   )
