@@ -1,0 +1,20 @@
+.test-container{
+     display: flex;
+     flex-direction: column;
+     justify-content: flex-start;
+     align-items: flex-start;
+     max-width: 90%;
+     margin: 0 auto;
+     padding: 10rem;
+     gap: 3rem;
+     box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
+}
+button{
+     background-color: var(--color-secondary-dark)
+     ;
+     cursor: pointer;
+     padding: 6px 10px;
+     border: none;
+     color: var(--color-white);
+     font-size: var(--fontSize-xl);
+}

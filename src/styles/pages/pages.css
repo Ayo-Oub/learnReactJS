@@ -47,3 +47,8 @@
   width: fit-content;
   min-width: 60rem;
 }
+li{
+     font-size: var(--fontSize-lg);
+     list-style: square;
+     list-style-position: inside;
+}

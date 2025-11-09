@@ -4,6 +4,9 @@ import ReactLatex from './pages/ReactLatex'
 import { Routes, Route } from 'react-router'
 import HomePage from './pages/HomePage'
 import ReactRouter from './pages/ReactRouter'
+import MapPage from './pages/MapPage'
+import OnClickPage from './pages/onClickPage'
+import Test from './pages/Test'
 function App() {
  
 
@@ -11,8 +14,11 @@ function App() {
     <>
       <Routes>
         <Route path='/' element={<HomePage />} />
+        <Route path='/test' element={<Test />} />
         <Route path='/react-latex' element={<ReactLatex />} />
         <Route path='/react_router' element={<ReactRouter />} />
+        <Route path='/map' element={<MapPage />} />
+        <Route path='/on_click' element={<OnClickPage />} />
       </Routes>
       
       

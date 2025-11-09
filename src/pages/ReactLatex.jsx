@@ -2,7 +2,7 @@ import { BlockMath, InlineMath } from 'react-katex';
 import { Link } from "react-router";
 import JsxCode from "../components/JsxCode";
 import jsxCodes from '../data/reactLatexData';
-import '../styles/pages/react.css';
+import '../styles/pages/pages.css';
 import 'katex/dist/katex.min.css';
 export default function ReactLatex() {
      return (
@@ -11,7 +11,7 @@ export default function ReactLatex() {
                     to="/"
                     className="back-link"
                >
-                    Back to Home
+                    Retour
                </Link>
                <div className="cours-container">
                     <h2 className="cours-title">
@@ -28,13 +28,13 @@ export default function ReactLatex() {
                     <p>Dans le terminal: </p>
                     <JsxCode language='bash' content={jsxCodes[0]} />
                     <ul>
-                         <li><p>react-katex : composant React qui permet d’utiliser KaTeX facilement dans JSX.</p></li>
-                         <li><p>katex : la librairie principale qui gère le rendu des formules mathématiques.</p></li>
+                         <li>react-katex : composant React qui permet d’utiliser KaTeX facilement dans JSX.</li>
+                         <li>katex : la librairie principale qui gère le rendu des formules mathématiques.</li>
                     </ul>
                     <h4 className="cours-section">Importation dans le code React</h4>
                     <ol>
-                         <li><p>Les composants de rendu (BlockMath, InlineMath)</p></li>
-                         <li><p>La feuille de style CSS de KaTeX pour que les formules s'affichent correctement.</p></li>
+                         <li>Les composants de rendu (BlockMath, InlineMath)</li>
+                         <li>La feuille de style CSS de KaTeX pour que les formules s'affichent correctement.</li>
                     </ol>
 
                     <JsxCode content={jsxCodes[1]} />

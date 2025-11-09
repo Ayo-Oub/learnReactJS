@@ -4,8 +4,30 @@ import { Link } from 'react-router'
 export default function HomePage() {
   return (
     <div className='home-container'>
-            <Link to='/react-latex' className='home-link'>React & Latex</Link>
-            <Link to='/react_router' className='home-link'>React & Router</Link>
+      <Link to='/test' className='home-link test'>Test</Link>
+      <div className='links-container'>
+        <h2>React</h2>
+        <div className='links'>
+          <Link to='/react-latex' className='home-link'>React & Latex</Link>
+          <Link to='/react_router' className='home-link'>React & Router</Link>
+        </div>
+
+      </div>
+      <div className='links-container'>
+        <h2>Méthodes</h2>
+        <div className='links'>
+          <Link to='/map' className='home-link'>La méthode map</Link>
+        </div>
+
+      </div>
+      <div className='links-container'>
+        <h2>Les évènements</h2>
+        <div className='links'>
+          <Link to='/on_click' className='home-link'>L'évènement onClick</Link>
+        </div>
+
+      </div>
+
     </div>
   )
 }

@@ -1,6 +1,6 @@
 import { Link } from "react-router";
 import JsxCode from "../components/JsxCode";
-import '../styles/pages/react.css'
+import '../styles/pages/pages.css'
 import jsxCodes from "../data/reactRouterData";
 
 export default function ReactRouter() {
@@ -10,7 +10,7 @@ export default function ReactRouter() {
                     to="/"
                     className="back-link"
                >
-                    Back to Home
+                    Retour
                </Link>
                <div className='cours-container'>
                     <h2 className="cours-title">
@@ -26,8 +26,8 @@ export default function ReactRouter() {
                     <p>Dans le terminal de ton projet React :</p>
                     <JsxCode language='bash' content={jsxCodes[0]} />
                     <ul>
-                         <li><p>react-router → le cœur de la bibliothèque (la logique principale du routage).</p></li>
-                         <li><p>react-router-dom → les outils spécifiques au navigateur (comme <code>&lt;BrowserRouter&gt;</code>, <code>&lt;Link&gt;</code>, etc.).</p></li>
+                         <li>react-router → le cœur de la bibliothèque (la logique principale du routage).</li>
+                         <li>react-router-dom → les outils spécifiques au navigateur (comme <code>&lt;BrowserRouter&gt;</code>, <code>&lt;Link&gt;</code>, etc.).</li>
 
                     </ul>
                     <h4 className="cours-section">Configuration du routeur (dans main.jsx)</h4>
@@ -39,21 +39,21 @@ export default function ReactRouter() {
                     <p>Fichier : App.jsx</p>
                     <JsxCode content={jsxCodes[2]} />
                     <ul>
-                         <li><p>&lt;Routes&gt; : contient toutes les routes de ton application.</p></li>
-                         <li><p>&lt;Route path="..." element={"{...}"} /&gt; : définit quelle page doit s'afficher pour chaque URL.</p></li>
-                         <li><p>path="/" est la page principale (souvent appelée index).</p></li>
+                         <li>&lt;Routes&gt; : contient toutes les routes de ton application.</li>
+                         <li>&lt;Route path="..." element={"{...}"} /&gt; : définit quelle page doit s'afficher pour chaque URL.</li>
+                         <li>path="/" est la page principale (souvent appelée index).</li>
                     </ul>
                     <h4 className="cours-section">Création des pages</h4>
                     <ul>
-                         <li><p>src/pages/HomePage.jsx</p></li>
-                         <li><p>src/pages/Page1.jsx</p></li>
-                         <li><p>src/pages/Page2.jsx</p></li>
+                         <li>src/pages/HomePage.jsx</li>
+                         <li>src/pages/Page1.jsx</li>
+                         <li>src/pages/Page2.jsx</li>
                     </ul>
                     <p>Exemple : HomePage.jsx</p>
                     <JsxCode content={jsxCodes[3]} />
                     <ul>
-                         <li><p>&lt;Link&gt; remplace les balises &lt;a&gt; traditionnelles du HTML.</p></li>
-                         <li><p>Il permet de naviguer entre les pages sans rechargement (grâce à React Router).</p></li>
+                         <li>&lt;Link&gt; remplace les balises &lt;a&gt; traditionnelles du HTML.</li>
+                         <li>Il permet de naviguer entre les pages sans rechargement (grâce à React Router).</li>
                     </ul>
                     <h4 className="cours-section">Styliser les liens de navigation</h4>
                     <p>Tu peux créer une classe CSS pour tes liens {'<Link>'}.</p>
