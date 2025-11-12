@@ -8,6 +8,9 @@ import MapPage from './pages/MapPage'
 import OnClickPage from './pages/onClickPage'
 import Test from './pages/Test'
 import ApiClipboard from './pages/ApiClipboard'
+import PropsPage from './pages/PropsPage'
+import OnchangePage from './pages/OnchangePAge'
+
 function App() {
  
 
@@ -20,12 +23,13 @@ function App() {
         <Route path='/react_router' element={<ReactRouter />} />
         <Route path='/map' element={<MapPage />} />
         <Route path='/on_click' element={<OnClickPage />} />
-        <Route path='/api_clipboard' element={<ApiClipboard />}/>
+        <Route path='/api_clipboard' element={<ApiClipboard />} />
+        <Route path='/props' element={<PropsPage />} />
+        <Route path='/on_change' element={<OnchangePage/>} />
       </Routes>
       
-      
     </>
-  )
+  );
 }
 
 export default App

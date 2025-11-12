@@ -8,6 +8,9 @@ export default function HomePage() {
       <div className='links-container'>
         <h2>React</h2>
         <div className='links'>
+          <Link to='/props' className='home-link'>Props 
+
+          </Link>
           <Link to='/react-latex' className='home-link'>React & Latex</Link>
           <Link to='/react_router' className='home-link'>React & Router</Link>
         </div>
@@ -24,6 +27,7 @@ export default function HomePage() {
         <h2>Les événements</h2>
         <div className='links'>
           <Link to='/on_click' className='home-link'>L'événement onClick</Link>
+          <Link to='/on_change' className='home-link'>L'événement onChange</Link>
         </div>
 
       </div>

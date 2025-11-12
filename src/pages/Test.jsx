@@ -1,35 +1,29 @@
 import { useState } from "react";
-
+import "../styles/pages/test.css";
 export default function Test() {
-     const [text, setText] = useState('');
-     function handleCopy() {
-          navigator.clipboard.writeText(text);
-   }
-     return (
-          <div className="test-container" style={{ textAlign: "center" }}>
-               <input
-                    type="text"
-                    value={text}
-                    onChange={(e) => setText(e.target.value)}
-                    style={{
-                         margin: "30px",
-                         padding: "10px",
-                         width: "80px"
-                    }}
-               />
-               <button
-                    onClick={handleCopy}
-                    style={{
-                         margin: "30px",
-                         padding: "10px",
-                         color: "#217263",
-                         backgroundColor: "#2982",
-                         fontSize: "20px", 
-                         border: "none",
-                         outline: "none",
-                         cursor: "pointer"
-                    }}
-               >Copy text</button>
-          </div>
-     );
+     const [todos, setTodos] = useState([]);
+     function handleAdd(e) {
+          if (e.key === "Enter" && e.target.value.trim() !== "") {
+               setTodos([...todos, e.target.value]);
+               e.target.value = "";
+          }
+     }
+      return (
+    <div
+      className="test-container"
+      style={{ textAlign: "center" }}
+           >
+                <input 
+                     className="test-input"
+                     type="text"
+                     placeholder="Ajoute une tache"
+                     onKeyDown={handleAdd}
+                />
+                <ul>
+                     {todos.map((todos, index) => (
+                          <li key={index}>{todos}</li>
+                     ))}
+                </ul>
+     </div>
+  );
 }
