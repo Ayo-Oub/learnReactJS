@@ -28,6 +28,27 @@ export default function CopierTexte() {
     </div>
   );
 }
+`,`import { useState } from "react";
+
+export default function CopierInput() {
+  const [value, setValue] = useState("");
+
+  function copyInput() {
+    navigator.clipboard.writeText(value);
+  }
+
+  return (
+    <div className="clipboard-container">
+      <input
+        type="text"
+        value={value}
+        onChange={(e) => setValue(e.target.value)}
+        placeholder="Écris ici..."
+      />
+      <button onClick={copyInput}>Copier</button>
+    </div>
+  );
+}
 `,
 ]
 export default api_clipBoard;

@@ -34,6 +34,8 @@ export default function ApiClipboard() {
                       <li>setTimeout → cache le message après 2 s.</li>
                       <li>L’action doit venir d’un clic utilisateur.</li>
                  </ul>
+                 <h4 className='cours-section'>Exemple avec un {'<input>'} dynamique</h4>
+                 <JsxCode content={api_clipBoard[2]} />
                  </div>
     </>
   )
