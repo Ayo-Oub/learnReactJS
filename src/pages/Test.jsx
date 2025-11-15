@@ -1,29 +1,35 @@
+
 import { useState } from "react";
 import "../styles/pages/test.css";
 export default function Test() {
-     const [todos, setTodos] = useState([]);
-     function handleAdd(e) {
-          if (e.key === "Enter" && e.target.value.trim() !== "") {
-               setTodos([...todos, e.target.value]);
-               e.target.value = "";
-          }
-     }
-      return (
-    <div
-      className="test-container"
-      style={{ textAlign: "center" }}
-           >
-                <input 
-                     className="test-input"
-                     type="text"
-                     placeholder="Ajoute une tache"
-                     onKeyDown={handleAdd}
-                />
-                <ul>
-                     {todos.map((todos, index) => (
-                          <li key={index}>{todos}</li>
-                     ))}
-                </ul>
-     </div>
-  );
+     const [articles, setArticles] = useState([
+          { id: 1, nom: "Chaussures", prix: 50 },
+          { id: 2, nom: "T-shirt", prix: 20 },
+     ]);
+
+     const ajouterArticle = () => {
+          const nouvelArticle = { id: 3, nom: "Casquette", prix: 15 };
+          setArticles([...articles, nouvelArticle]);
+     };
+
+     const supprimerArticle = (id) => {
+          setArticles(articles.filter(article => article.id !== id));
+     };
+     return (
+          <div
+               className="test-container"
+               style={{ textAlign: "center" }}
+          >
+               <h3>Panier</h3>
+               <ul>
+                    {articles.map(article => (
+                         <li key={article.id}>
+                              {article.nom} - {article.prix}€
+                              <button onClick={() => supprimerArticle(article.id)}>❌</button>
+                         </li>
+                    ))}
+               </ul>
+               <button onClick={ajouterArticle}>Ajouter un article</button>
+          </div>
+     );
 }

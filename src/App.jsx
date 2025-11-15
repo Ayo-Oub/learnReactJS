@@ -10,6 +10,7 @@ import Test from './pages/Test'
 import ApiClipboard from './pages/ApiClipboard'
 import PropsPage from './pages/PropsPage'
 import OnchangePage from './pages/OnchangePAge'
+import UseStatePage from './pages/UseStatePage'
 
 function App() {
  
@@ -25,7 +26,8 @@ function App() {
         <Route path='/on_click' element={<OnClickPage />} />
         <Route path='/api_clipboard' element={<ApiClipboard />} />
         <Route path='/props' element={<PropsPage />} />
-        <Route path='/on_change' element={<OnchangePage/>} />
+        <Route path='/on_change' element={<OnchangePage />} />
+        <Route path='/use_state' element={<UseStatePage/>}/>
       </Routes>
       
     </>

@@ -11,6 +11,7 @@ export default function HomePage() {
           <Link to='/props' className='home-link'>Props 
 
           </Link>
+          <Link to='/use_state' className='home-link'>UseState</Link>
           <Link to='/react-latex' className='home-link'>React & Latex</Link>
           <Link to='/react_router' className='home-link'>React & Router</Link>
         </div>
