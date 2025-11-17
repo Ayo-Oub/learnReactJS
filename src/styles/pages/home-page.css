@@ -4,7 +4,7 @@
      justify-content: center;
      max-width: 1200px;
      margin: 0 auto;
-     padding: 20rem;
+     padding: 2rem;
      gap: 5rem;
      height: 100vh;
 }
@@ -37,8 +37,8 @@
         background-color: var(--color-primary-dark);
 }
 
-@media (max-width: 28.125rem){
+@media (max-width: 24.375rem){
      html{
-          font-size: 35%;
+          font-size: 33%;
      }
 }

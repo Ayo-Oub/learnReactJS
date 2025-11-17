@@ -2,34 +2,35 @@
 import { useState } from "react";
 import "../styles/pages/test.css";
 export default function Test() {
-     const [articles, setArticles] = useState([
-          { id: 1, nom: "Chaussures", prix: 50 },
-          { id: 2, nom: "T-shirt", prix: 20 },
-     ]);
-
-     const ajouterArticle = () => {
-          const nouvelArticle = { id: 3, nom: "Casquette", prix: 15 };
-          setArticles([...articles, nouvelArticle]);
-     };
-
-     const supprimerArticle = (id) => {
-          setArticles(articles.filter(article => article.id !== id));
-     };
+     const [tache, setTache] = useState("");
+     const [taches, setTaches] = useState([]);
+     const [i, setI] = useState(0);
+     const addTache = () => {
+          
+          tache.trim() !== "" && setTaches([...taches, { id: i, nameTache: tache,}])
+         setI(i+1)
+          setTache('')
+     }
+     function deleteTache(id) {
+          const newTaches = taches.filter((tache) => tache.id !== id);
+          setTaches(newTaches);
+     }
      return (
           <div
                className="test-container"
                style={{ textAlign: "center" }}
           >
-               <h3>Panier</h3>
+               <input 
+                    className="test-input"
+                    type="text"
+                    value={tache}
+                    onChange={(e) => setTache(e.target.value)}
+               />
+               <button onClick={addTache}>Ajoute une tache</button>
+               <br />
                <ul>
-                    {articles.map(article => (
-                         <li key={article.id}>
-                              {article.nom} - {article.prix}€
-                              <button onClick={() => supprimerArticle(article.id)}>❌</button>
-                         </li>
-                    ))}
+                    {taches.map((t, i) => <li key={i}>{t.nameTache}-{t.id} <button onClick={() => deleteTache(t.id)}>❌</button></li>)}
                </ul>
-               <button onClick={ajouterArticle}>Ajouter un article</button>
           </div>
      );
 }

@@ -21,6 +21,7 @@ export default function HomePage() {
         <h2>Méthodes</h2>
         <div className='links'>
           <Link to='/map' className='home-link'>La méthode map</Link>
+          <Link to='/filter' className='home-link'>La méthode filter</Link>
         </div>
 
       </div>
