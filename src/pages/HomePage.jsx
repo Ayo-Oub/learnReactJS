@@ -40,7 +40,13 @@ export default function HomePage() {
         </div>
 
       </div>
+      <div className='links-container'>
+        <h2>Projects</h2>
+        <div className='links'>
+          <Link to='/todo' className='home-link'>To-Do (Très Simple)</Link>
+        </div>
 
+      </div>
     </div>
   )
 }

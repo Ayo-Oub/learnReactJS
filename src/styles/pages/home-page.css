@@ -37,8 +37,3 @@
         background-color: var(--color-primary-dark);
 }
 
-@media (max-width: 24.375rem){
-     html{
-          font-size: 33%;
-     }
-}

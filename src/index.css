@@ -83,3 +83,8 @@ span{
   width: 90%;
   margin: 0 auto;
 }
+@media (max-width: 24.375rem){
+     html{
+          font-size: 33%;
+     }
+}
