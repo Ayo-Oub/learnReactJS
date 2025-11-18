@@ -13,6 +13,7 @@ import OnchangePage from './pages/OnchangePAge'
 import UseStatePage from './pages/UseStatePage'
 import FilterPage from './pages/FilterPage'
 import ToDo1 from './pages/Projects/ToDo1'
+import UseEffectPage from './pages/UseEffectPage'
 
 function App() {
  
@@ -31,7 +32,8 @@ function App() {
         <Route path='/on_change' element={<OnchangePage />} />
         <Route path='/use_state' element={<UseStatePage />} />
         <Route path='/filter' element={<FilterPage />} />
-        <Route path='/todo' element={<ToDo1/>}/>
+        <Route path='/todo' element={<ToDo1 />} />
+        <Route path='/use_effect' element={<UseEffectPage/>} />
       </Routes>
       
     </>
