@@ -1,58 +1,79 @@
 const jsxCodes = [
-     "npm install react-router@latest \nnpm install react-router-dom",
-     `import React from 'react''
-import ReactDom from 'react-dom/client'
-import App from './App.jsx'
-import { BrowserRouter } from 'react-router-dom'
+  "npm install react-router-dom",
+  `import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import Page1 from "./pages/Page1";
+import Page2 from "./pages/Page2";
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>
-)
-     `,
-     `import { Routes, Route } from 'react-router-dom'
-import HomePage from './pages/HomePage'
-import Page1 from './pages/Page1'
-import Page2 from './pages/Page2'
+const router = createBrowserRouter([
+  { path: "/", element: <HomePage /> },
+  { path: "/page1", element: <Page1 /> },
+  { path: "/page2", element: <Page2 /> },
+]);
 
 export default function App() {
-  return (
-    <Routes>
-      <Route path="/" element={<HomePage />} />    {/* Page d'accueil */}
-      <Route path="page1" element={<Page1 />} />    {/* Première page */}
-      <Route path="page2" element={<Page2 />} />    {/* Deuxième page */}
-    </Routes>
-  )
+  return <RouterProvider router={router} />;
 }
 `,
-     `import { Link } from 'react-router-dom'
+  `import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App";
+
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <App />
+);
+
+`,
+  `import { Link } from "react-router-dom";
 
 export default function HomePage() {
   return (
     <div>
       <h1>Accueil</h1>
-      <p>Bienvenue sur la page d'accueil.</p>
 
       <nav>
-        <Link to="/page1" className="nav-link">Page 1</Link>
-        <Link to="/page2" className="nav-link">Page 2</Link>
+        <Link to="/page1">Vers Page 1</Link><br />
+        <Link to="/page2">Vers Page 2</Link>
       </nav>
     </div>
-  )
+  );
 }
+
 `,
-     `.nav-link {
-  color: #007acc;
-  text-decoration: none;
-  margin-right: 10px;
+  `import { NavLink } from "react-router-dom";
+
+export default function Navbar() {
+  return (
+    <nav>
+      <NavLink 
+        to="/"
+        className={({ isActive }) => isActive ? "active" : ""}
+      >
+        Accueil
+      </NavLink>
+
+      <NavLink 
+        to="/page1"
+        className={({ isActive }) => isActive ? "active" : ""}
+      >
+        Page 1
+      </NavLink>
+
+      <NavLink 
+        to="/page2"
+        className={({ isActive }) => isActive ? "active" : ""}
+      >
+        Page 2
+      </NavLink>
+    </nav>
+  );
+}
+
+`,
+  `.active {
   font-weight: bold;
-}
-
-.nav-link:hover {
-  text-decoration: underline;
+  color: blue;
 }
 `,
-
 ];
 export default jsxCodes;
